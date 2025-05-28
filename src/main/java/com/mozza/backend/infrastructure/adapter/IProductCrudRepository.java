@@ -1,5 +1,9 @@
 package com.mozza.backend.infrastructure.adapter;
 
-public interface IProductCrudRepository {
+
+import com.mozza.backend.infrastructure.entity.ProductEntity;
+import org.springframework.data.repository.CrudRepository;
+
+public interface IProductCrudRepository extends CrudRepository <ProductEntity,Long>{
 
 }

@@ -2,9 +2,7 @@ package com.mozza.backend.application;
 
 import com.mozza.backend.domain.model.Product;
 import com.mozza.backend.domain.port.IProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.Optional;
+import org.springframework.transaction.annotation.Transactional;
 
 public class ProductService {
 
@@ -15,6 +13,7 @@ public class ProductService {
         this.iProductRepository = iProductRepository;
     }
 
+    @Transactional
     public Product save(Product product){
 
         return iProductRepository.save(product);
@@ -32,7 +31,7 @@ public class ProductService {
     }
 
 
-    void deleteById(Long id){
+    public void deleteById(Long id){
 
         this.iProductRepository.deleteById(id);
     }

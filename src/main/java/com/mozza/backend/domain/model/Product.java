@@ -23,7 +23,7 @@ public class Product {
     private BigDecimal price;
     private LocalDateTime dateCreated;
     private LocalDateTime dateUpdated;
-    private Long userID;
+    private Long userId;
     private Long categoryId;
 
 

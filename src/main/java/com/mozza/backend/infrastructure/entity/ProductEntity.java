@@ -3,6 +3,7 @@ package com.mozza.backend.infrastructure.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -27,6 +28,7 @@ public class ProductEntity {
     private LocalDateTime dateCreated;
     @UpdateTimestamp
     private LocalDateTime dateUpdated;
+
     @ManyToOne
     private UserEntity userEntity;
     @ManyToOne

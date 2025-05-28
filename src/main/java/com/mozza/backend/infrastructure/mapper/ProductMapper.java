@@ -14,31 +14,25 @@ public interface ProductMapper {
     @Mappings(
 
             {       @Mapping(source = "id",target = "id"),
-                    @Mapping(source = "name",target = "id"),
-                    @Mapping(source = "code",target = "id"),
-                    @Mapping(source = "description",target = "id"),
-                    @Mapping(source = "urlImage",target = "id"),
-                    @Mapping(source = "price",target = "id"),
-                    @Mapping(source = "dateCreated",target = "id"),
-                    @Mapping(source = "dateUpdated",target = "id"),
-                    @Mapping(source = "userID",target = "id"),
-                    @Mapping(source = "categoryId",target = "id"),
-
-
-
+                    @Mapping(source = "name",target = "name"),
+                    @Mapping(source = "code",target = "code"),
+                    @Mapping(source = "description",target = "description"),
+                    @Mapping(source = "urlImage",target = "urlImage"),
+                    @Mapping(source = "price",target = "price"),
+                    @Mapping(source = "dateCreated",target = "dateCreated"),
+                    @Mapping(source = "dateUpdated",target = "dateUpdated"),
+                    @Mapping(source = "userEntity.id",target = "userId"),
+                    @Mapping(source = "categoryEntity.id",target = "categoryId")
 
             }
     )
 
     Product toProduct(ProductEntity productEntity);
 
-    Iterable<Product> toProducts(Iterable<ProductEntity> productEntities);
+    Iterable<Product> toProductList(Iterable<ProductEntity> productEntities);
 
     @InheritInverseConfiguration
     ProductEntity toProductEntity(Product product);
-
-
-
 
 
 }
