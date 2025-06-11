@@ -3,6 +3,7 @@ package com.mozza.backend.infrastructure.rest;
 
 import com.mozza.backend.application.OrderService;
 import com.mozza.backend.domain.model.Order;
+import com.mozza.backend.domain.model.OrderState;
 import com.mozza.backend.infrastructure.mapper.IOrderMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,15 @@ public class OrderController {
 
     @PostMapping("/save")
         public ResponseEntity<Order> save(@RequestBody Order order){
+
+        //System.out.println(order.getOrderState());
+        /*
+        if (order.getOrderState().toString().equals(OrderState.CANCELLED.toString()) ){
+            order.setOrderState(OrderState.CANCELLED);
+        }else{
+            order.setOrderState(OrderState.CONFIRMED);
+        }*/
+
         System.out.println("Order  "+order );
         return ResponseEntity.ok(this.orderService.save(order));
     }

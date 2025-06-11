@@ -20,7 +20,7 @@ public class OrderService {
         System.out.println(" OrderState.CANCELLED.toString()  "+OrderState.CANCELLED.toString());
         if (order.getOrderState().toString().equals(OrderState.CANCELLED.toString())){
             order.setOrderState(OrderState.CANCELLED);
-        }else{
+        }else {
             order.setOrderState(OrderState.CONFIRMED);
         }
 

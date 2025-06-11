@@ -4,6 +4,7 @@ INSERT INTO users (date_created,date_updated,id,address,cellphone,email,firstnam
 INSERT INTO users (date_created,date_updated,id,address,cellphone,email,firstname,lastname,password,username,user_type) VALUES ('2025-05-23 10:04:31','2025-05-23 10:04:31',4,'Casa de los Abuelos','543434455','peranza@mail.com','peranza','perez','1234','peritahp','USER');
 INSERT INTO categories(id,name,date_created,date_updated) VALUES (1,'Electronicos','2025-05-23 10:04:31','2025-05-23 10:04:31');
 INSERT INTO categories(id,name,date_created,date_updated) VALUES (2,'Electricos','2025-05-23 10:04:31','2025-05-23 10:04:31');
+INSERT INTO categories(id,name,date_created,date_updated) VALUES (3,'Hogar','2025-05-23 10:04:31','2025-05-23 10:04:31');
 INSERT INTO products (price,category_entity_id,date_created,date_updated,id,user_entity_id,code, description,name) VALUES (120,1,'2025-05-23 10:04:31','2025-05-23 10:04:31',1,1,'04500','Pantalla plana 85 pulgadas','TV Samsung');
 INSERT INTO products (price,category_entity_id,date_created,date_updated,id,user_entity_id,code, description,name) VALUES (120,2,'2025-05-23 10:04:31','2025-05-23 10:04:31',2,1,'04600','Pantalla plana 32 pulgadas','TV Samsung short');
 INSERT INTO products (price,category_entity_id,date_created,date_updated,id,user_entity_id,code, description,name) VALUES (120,1,'2025-05-23 10:04:31','2025-05-23 10:04:31',3,1,'03300','Play Statopm','Consola VideoJuegos');

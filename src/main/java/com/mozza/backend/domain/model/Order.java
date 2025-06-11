@@ -1,12 +1,16 @@
 package com.mozza.backend.domain.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Setter
+@Getter
 @Data
 public class Order {
     private Long id;
